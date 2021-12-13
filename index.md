@@ -9,7 +9,7 @@ const keyword can be used in many contexts in a C++ program , as the following :
 
 
 
- <font size ="5" color="blue">**1. constant variable** </font>
+ <font size ="5">**1. constant variable** </font>
    - If you make any variable as constant ,you can't change its value .Also,the constant variables must be initialized while they are declared
    - example : 
 ```
@@ -130,5 +130,5 @@ int *y =&x ;
 cout<< y <<endl // this will be display the refrance of x 
 
 ````
-
+3. <font size ="5" >  & bitwise AND in C or C++ takes two numbers as operands and does AND on every bit of two numbers. The result of AND is 1 only if both bits are 1</font>
 
