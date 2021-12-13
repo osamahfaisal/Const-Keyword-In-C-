@@ -1,4 +1,5 @@
-#  using of keyword const and & operation in c++
+#  <font color ="green " > using of keyword const and & operation in c++ </font >
+## using of keyword const 
 
 ![image](https://user-images.githubusercontent.com/93501065/145822193-8e0bfa13-7cda-4af3-9e19-9934daa7dee1.png)
  
@@ -8,7 +9,7 @@ const keyword can be used in many contexts in a C++ program , as the following :
 
 
 
-1. <font size ="5">**constant variable** </font>
+ <font size ="5" color="blue">**1. constant variable** </font>
    - If you make any variable as constant ,you can't change its value .Also,the constant variables must be initialized while they are declared
    - example : 
 ```
@@ -33,6 +34,7 @@ b. **const pointer :** we can't change the pointer, which means it will always p
 int x = 1 ;
 int *const y =&x ;
 ```
+
 - this image illustrate constant pointer and Pointer to a const variable
 
 
@@ -105,3 +107,28 @@ int main()
     return 0;
 }
 ````
+
+
+
+## & operation in c++
+
+
+1. <font size ="5">**&& Logical AND.**</font>  True only if all the operands are true
+
+````
+if(x<y && z==g) 
+ cout<< "True"<<endl // if the two parts are true the out put are true 
+else 
+cout<<"False "<<  // if any or both part ar false 
+
+````
+
+2. <font size ="5">**& represent memory address  :**</font>
+````
+int x =15 ; 
+int *y =&x ; 
+cout<< y <<endl // this will be display the refrance of x 
+
+````
+
+
