@@ -9,8 +9,8 @@ const keyword can be used in many contexts in a C++ program , as the following :
 
 
 1. <font size ="5">**constant variable** </font>
-- If you make any variable as constant ,you can't change its value .Also,the constant variables must be initialized while they are declared
-- example : 
+   - If you make any variable as constant ,you can't change its value .Also,the constant variables must be initialized while they are declared
+   - example : 
 ```
 const int i = 10 ; 
 i ++ ;  // this leads to Compile time error 
@@ -28,7 +28,6 @@ a. **Pointer to a const variable:** This means that the pointer is pointing to a
 ```
 const int* u;  // in this case the pointer point to a const variable 
 ```
-
 b. **const pointer :** we can't change the pointer, which means it will always point to the variable  but can change the value that it points to, by changing the value of variable as :
 ```
 int x = 1 ;
@@ -71,18 +70,18 @@ int main()
 ```
 
 5. <font size = "5" >**Defining Class Object as const**</font>: When an object is declared or created using the const keyword, its data members can never be changed, during the object's lifetime 
-- For example, if in the class C defined above, we want to define a constant object, we can do it like:
+   - For example, if in the class C defined above, we want to define a constant object, we can do it like:
 ```
 const C r(30);
 
 ```
 6. <font size ="5">**Defining Class's Member function as const :**</font> A const member functions never modifies data members in an object.
-- its syntax is 
+   - its syntax is 
 ```
 return_type function_name() const;
 ```
-
-consider the following class : 
+ 
+ - Also shown in the following class is a const constructor in the creat object and a const method : 
 
 ````
 class Something
@@ -93,7 +92,7 @@ public:
     Something(): m_value{0} { }
 
     void setValue(int value) { m_value = value; }
-    int getValue() { return m_value ; }
+    int getValue() const  { return m_value ; }  // const method 
 };
 
 int main()
