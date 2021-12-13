@@ -1,21 +1,27 @@
 #  using of keyword const and & operation in c++
+
 ![image](https://user-images.githubusercontent.com/93501065/145822193-8e0bfa13-7cda-4af3-9e19-9934daa7dee1.png)
  
-- <font size = "4">The const keyword allows you to specify whether or not a variable is modifiable. In C language and C++ we use the keyword const to make program elements constant. 
+
+- <font size = "5">The const keyword allows you to specify whether or not a variable is modifiable. In C language and C++ we use the keyword const to make program elements constant. 
 const keyword can be used in many contexts in a C++ program , as the following :</font>
 
 
 
-1. <font size ="4">**constant variable** </font>
+1. <font size ="5">**constant variable** </font>
 - If you make any variable as constant ,you can't change its value .Also,the constant variables must be initialized while they are declared
 - example : 
 ```
 const int i = 10 ; 
 i ++ ;  // this leads to Compile time error 
 ```
+
+
 ![image](https://media.geeksforgeeks.org/wp-content/cdn-uploads/Constants-in-C.png)
 
-2.  <font size ="4">**pointer with const keyword** </font>
+
+
+2.  <font size ="5">**pointer with const keyword** </font>
 - we can do it in two ways.
 
 a. **Pointer to a const variable:** This means that the pointer is pointing to a const variable as :
@@ -29,9 +35,13 @@ int x = 1 ;
 int *const y =&x ;
 ```
 - this image illustrate constant pointer and Pointer to a const variable
+
+
 ![image](https://media.geeksforgeeks.org/wp-content/cdn-uploads/PointersWithConstants-1024x535.png)
 
-3. <font size ="4">**const Function argument and return type**</font>:We can make the return type or arguments of a function as const. Then we cannot change any of them as :
+
+
+3. <font size ="5">**const Function argument and return type**</font>:We can make the return type or arguments of a function as const. Then we cannot change any of them as :
 
 ```
 void function1(const int x ){  // void function with const argument
@@ -60,15 +70,39 @@ int main()
 }
 ```
 
-5. Defining Class Object as const : When an object is declared or created using the const keyword, its data members can never be changed, during the object's lifetime 
+5. <font size = "5" >**Defining Class Object as const**</font>: When an object is declared or created using the const keyword, its data members can never be changed, during the object's lifetime 
 - For example, if in the class C defined above, we want to define a constant object, we can do it like:
 ```
 const C r(30);
+
 ```
-6. Defining Class's Member function as const :A const member functions never modifies data members in an object.
+6. <font size ="5">**Defining Class's Member function as const :**</font> A const member functions never modifies data members in an object.
 - its syntax is 
 ```
 return_type function_name() const;
 ```
 
+consider the following class : 
 
+````
+class Something
+{
+public:
+    int m_value {};
+
+    Something(): m_value{0} { }
+
+    void setValue(int value) { m_value = value; }
+    int getValue() { return m_value ; }
+};
+
+int main()
+{
+    const Something something{}; // calls default constructor
+
+    something.m_value = 5; // compiler error: violates const
+    something.setValue(5); // compiler error: violates const
+
+    return 0;
+}
+````
